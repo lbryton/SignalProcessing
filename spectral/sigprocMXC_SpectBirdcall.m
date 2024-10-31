@@ -10,7 +10,7 @@
 [bc,fs] = audioread('XC403881.mp3'); % in Octave, import the wav version
 
 % let's hear it!
-soundsc(bc,fs)
+% soundsc(bc,fs)
 
 
 % create a time vector based on the data sampling rate

@@ -24,7 +24,7 @@ for fi=1:length(frex)
 end
 
 % add some noise
-signal = signal + randn(size(signal));
+signal = signal + 1 * randn(size(signal));
 
 % amplitude spectrum via Fourier transform
 signalX = fft(signal);
@@ -62,7 +62,7 @@ searchdata = [69 77 87 86 87 71 70 92 83 73 76 78 56 75 68 60 30 44 58 69 82 76 
 N = length(searchdata);
 
 % possible normalization
-% searchdata = searchdata;
+searchdata = searchdata - mean(searchdata);
 
 % power
 searchpow = abs( fft( searchdata )/N ).^2;
